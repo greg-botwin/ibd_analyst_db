@@ -7,8 +7,8 @@ workflow to get access to IBD  db
 3. Apply the template file provided to setup driver odbcinst.ini file `sudo odbcinst -i -d -f /usr/share/psqlodbc/odbcinst.ini.template`
 4. Apply the template file provided to setup datasource odbc.ini file for all users on system `sudo odbcinst -i -s -l  -n ibd-pg -f /usr/share/doc/odbc-postgresql/examples/odbc.ini.template`
 5. Modify the SYSTEM DATA SOURCES: /etc/odbc.ini to match db settings. This file should be filled with the details corresponding to the Role for all database users (e.g. ibd_analyst) `sudo nano /etc/odbc.ini`
-6. Apply the template file provided to setup datasource odbc.ini file for admin user `cp /usr/share/doc/odbc-postgresql/examples/odbc.ini.template /home/name/.odbc.ini`
-7. Modify the USER DATA SOURCES: /home/name/.odbc.ini to match db settings. This file should be filled with the details corresponding to the Role for the database adminstrator. `sudo nano /home/name/.odbc.ini`
+6. Apply the template file provided to setup datasource odbc.ini file for admin user `cp /usr/share/doc/odbc-postgresql/examples/odbc.ini.template /home/[NAME]/.odbc.ini`
+7. Modify the USER DATA SOURCES: /home/name/.odbc.ini to match db settings. This file should be filled with the details corresponding to the Role for the database adminstrator. `sudo nano /home/[NAME]/.odbc.ini`
 
 # Analyst Start-Up
 1. In RSTUDIO install the DBI and odbc package. You only need to do this once. `install.packages("DBI")` `install.packages("odbc")`
