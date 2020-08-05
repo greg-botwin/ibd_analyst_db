@@ -1,0 +1,16 @@
+// FamilyCancerHistory-block.tron
+{
+    @self,
+    elements: [
+        {    
+            subtype: ""column"",
+            columns: 4,
+            elements: [
+               @celldef( #{./condition/key;name=?0;mhx=?1}, /condition/familyHasCondition ),
+               @celldef( #{./condition/key;name=?0;mhx=?1}, /condition/description ),
+               @celldef( #{./condition/key;name=?0;mhx=?1}, /condition/familyHasCondition.familyRelation ),
+               @celldef( #{./condition/key;name=?0;mhx=?1}, /condition/familyHasCondition.familyRelationOther )
+            ]
+        }     
+    ]
+}
